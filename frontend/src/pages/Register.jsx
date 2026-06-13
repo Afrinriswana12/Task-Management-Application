@@ -23,10 +23,9 @@ export default function Register() {
 
       navigate("/dashboard");
     } catch (error) {
-      alert(
-        error.response?.data?.message || "Registration failed"
-      );
-    }
+  console.log(error.response?.data || error.message);
+  alert(error.response?.data?.message || "Registration failed");
+}
   };
 
   return (
